@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Medication</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form onsubmit="event.preventDefault(); submitMedication();">
+    <h2>Add Medication</h2>
+
+    <input id="name" placeholder="Medication Name" required><br>
+    <input id="dosage" placeholder="Dosage (e.g. 500mg)" required><br>
+    <input id="frequency" placeholder="Frequency (e.g. Twice a day)" required><br>
+    <input id="start_date" type="date" placeholder="Start Date" required><br>
+
+    <textarea id="notes" placeholder="Additional Notes" rows="4"></textarea><br>
+
+    <select id="status" required>
+      <option value="">Select Status</option>
+      <option value="Active">Active</option>
+      <option value="Discontinued">Discontinued</option>
+    </select><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

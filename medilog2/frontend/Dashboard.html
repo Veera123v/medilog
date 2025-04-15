@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediLog Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>MediLog Dashboard</h1>
+
+    <!-- Header with logout and summary -->
+    <div class="dashboard-header">
+      <button onclick="logout()">Logout</button>
+      <span id="summary"></span>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <select id="statusFilter" onchange="loadMedications()">
+        <option value="">All Statuses</option>
+        <option value="Active">Active</option>
+        <option value="Discontinued">Discontinued</option>
+      </select>
+
+      <select id="sortOption" onchange="loadMedications()">
+        <option value="">Sort By</option>
+        <option value="name">Medication Name</option>
+        <option value="date">Start Date</option>
+      </select>
+    </div>
+
+    <!-- Medications -->
+    <div id="medicationList"></div>
+
+    <!-- Add Medication -->
+    <button onclick="location.href='medication_form.html'">➕ Add Medication</button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
